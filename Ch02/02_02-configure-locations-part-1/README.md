@@ -1,6 +1,7 @@
 # 02_02 Configure locations
 
 Location directives allow the NGINX configuration to be extended based on the URI, or uniform resource indicator, that makes up the request being processed by the server.
+-Location directives are formatted as blocks and are defined inside server blocks. They can also be nested inside other location blocks.
 
 -extends the configuration based on the uniform resource indicator(URI) of the request being processed by the server
 -they can also be nested inside other location blocks
@@ -8,6 +9,10 @@ Location directives allow the NGINX configuration to be extended based on the UR
 [NGINX documentation for the location directive](http://nginx.org/en/docs/http/ngx_http_core_module.html#location)
 
 Location directives are formatted as blocks and are defined inside server blocks.  They can also be nested inside other location blocks.
+
+What are location directive useful for?
+-configuring NGINX to process different requests in ways similar to server blocks without having to create additional servers
+-extending an NGINX configuration based on the URI being processed by the server
 
 ```nginx
 server {

@@ -1,6 +1,7 @@
 # 02_04 Configure logs
 
 Nginx uses log files to record various operational details. These logs are useful for monitoring normal operations and tracking down issues if a problem occurs.
+-NGINX uses log files to record various operational details like the date, time, and name of a file that was served. These logs are useful for monitoring normal operation and tracking down issues if a problem occurs.
 
 Access logs record details like the time a request took place; if the request was served successfully or failed; and details like the client's IP address and browser type.
 
@@ -20,6 +21,7 @@ http {
 ```
 
 This file has two directives: access log, and error log.
+-Default logging is configured in the http context and can be overridden in the server and location contexts.
 
 If nginx is set up to serve multiple sites, all the requests, for all the sites will be written to the same logs.  This can become an issue if, for example, you need to find the access logs for one specific site.
 

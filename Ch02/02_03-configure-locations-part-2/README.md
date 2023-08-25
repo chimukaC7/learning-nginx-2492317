@@ -5,6 +5,9 @@ Update the configuration for the demo site by adding location directives for:
 - images
 - error pages
 
+
+
+
 # Directive documentation
 - [`location`](http://nginx.org/en/docs/http/ngx_http_core_module.html#location)
 - [`try_files`](http://nginx.org/en/docs/http/ngx_http_core_module.html#try_files)
@@ -29,6 +32,7 @@ server {
         # the first file or directory that matches gets processed
         # if no items in the list match then the last item in the list is used as URI or an error code
 		try_files $uri $uri/ =404;
+        # The try_files directive gives NGINX a list of files or directories to look for, relative to the location. The first file or directory that matches gets processed. If no items in the list match, then the last item in the list is used as a URI or an error code.
 	}
 
 	location /images {
