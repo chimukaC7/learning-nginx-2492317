@@ -26,3 +26,33 @@ If you need the steps to set up and connect to a server on AWS, there’s a prev
         systemctl status nginx --no-pager
 
 
+1. Starting,stoping and reloading
+-nginx loads configuration into memory
+
+        systemctl start nginx
+        systemctl stop nginx
+        systemctl reload nginx
+        systemctl status nginx
+
+
+1. Testing
+        nginx -t
+        nginx -T
+
+
+Files and directories
+
+        cd /etc/nginx
+
+-the etc directory holds the congiguration for the entire installation
+-the main configuration file is nginx.conf
+
+        cd /var/log/nginx
+
+        cd /var/www
+-stores and any other documents that that get served to a client,
+
+
+-inside nginx.conf
+
+        view nginx.conf
