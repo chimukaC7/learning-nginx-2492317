@@ -23,6 +23,8 @@ This file has two directives: access log, and error log.
 
 If nginx is set up to serve multiple sites, all the requests, for all the sites will be written to the same logs.  This can become an issue if, for example, you need to find the access logs for one specific site.
 
+-logs can be set in the server directive as well as the location directive
+
 
 [binaryville.conf](./binaryville.conf)
 

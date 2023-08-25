@@ -22,8 +22,12 @@ server {
 	root /var/www/binaryville;
 
 	location / {
+        # this wll corresponde to the route directory of our site
         # First attempt to serve a request as file, then
         # as directory, then fall back to displaying a 404.
+        # gives nginx a list of files or directories to look for relative to the location
+        # the first file or directory that matches gets processed
+        # if no items in the list match then the last item in the list is used as URI or an error code
 		try_files $uri $uri/ =404;
 	}
 
